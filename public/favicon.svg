@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="oceanOrangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB923C" />
+      <stop offset="45%" stop-color="#EA580C" />
+      <stop offset="100%" stop-color="#C2410C" />
+    </linearGradient>
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A" />
+      <stop offset="100%" stop-color="#FDE047" />
+    </linearGradient>
+    <filter id="shadowDrop" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Base Rounded Shape (Ocean Current Orange) -->
+  <rect width="128" height="128" rx="28" fill="url(#oceanOrangeGrad)" />
+
+  <!-- Inner Subtle Ripple Ring -->
+  <circle cx="64" cy="64" r="54" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="4 6" opacity="0.3" />
+
+  <!-- Surging Ocean Current Waves (Smooth Vector Arcs) -->
+  <g filter="url(#shadowDrop)">
+    <!-- First Wave Crest -->
+    <path d="M 20 84 C 38 60, 56 102, 78 72 C 92 52, 106 60, 114 56" 
+          fill="none" 
+          stroke="#FFFFFF" 
+          stroke-width="8" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+    
+    <!-- Secondary Harmonic Wave -->
+    <path d="M 16 98 C 34 76, 52 114, 74 88 C 88 70, 102 76, 110 74" 
+          fill="none" 
+          stroke="#FED7AA" 
+          stroke-width="5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          opacity="0.85" />
+  </g>
+
+  <!-- Civic Voice Resonance Pulse (Golden Sun / Pulse Dot) -->
+  <circle cx="96" cy="38" r="9" fill="url(#goldGlow)" filter="url(#shadowDrop)" />
+  <circle cx="96" cy="38" r="15" fill="none" stroke="#FEF08A" stroke-width="2.5" opacity="0.5" stroke-dasharray="2 3" />
+</svg>
